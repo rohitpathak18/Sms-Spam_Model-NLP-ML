@@ -19,3 +19,10 @@ In this repositary i have created a SMS Spam Prediction project modelin machine 
   - Go to your browser and type http://127.0.0.1:5000/ in the address bar.
   - Hurray! That's it. <br>
 
+## ScreenShot :camera_flash:
+![](https://github.com/rohitpathak18/Sms-Spam_Model-NLP-ML-/blob/master/Images/Img-1.png)    ![](https://github.com/rohitpathak18/Sms-Spam_Model-NLP-ML-/blob/master/Images/Img-2.png)    ![](https://github.com/rohitpathak18/Sms-Spam_Model-NLP-ML-/blob/master/Images/Img-3.png)
+
+## Connect with me! 🌐
+- [[Linkedin]](bit.ly/3xNkOzO)
+- [[Instagram]](bit.ly/3eTGyRT)
+- [[Twitter]](bit.ly/3aWT16g)

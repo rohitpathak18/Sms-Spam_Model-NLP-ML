@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <!--===============================================================================================-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!--===============================================================================================-->
+    <link rel="shortcut icon" href="{{ url_for('static', filename='icon/icon.ico') }}">
+    <!--===========================================================================================-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <!--===============================================================================================-->
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <!--===============================================================================================-->
+    <meta name="description" content="Spam SMS Detection">
+    <!--===============================================================================================-->
+    <meta name="author" content="Spam SMS Detection">
+    <!--===============================================================================================-->
+    <meta name="keywords" content="Spam SMS Detection">
+    <!--===============================================================================================-->
+    <!-- Title Page-->
+    <title>Spam SMS Detection || Rohit Pathak</title>
+    <!--===============================================================================================-->
+    <!-- Font special for pages-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+    <!--===============================================================================================-->
+    <!-- Main CSS-->
+    <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet" media="all">
+    <!--===============================================================================================-->
+</head>
+
+<body>
+    <div class="page-wrapper bg-dark p-t-100 p-b-50">
+        <div class="wrapper wrapper--w900">
+            <div class="card card-6">
+                <div class="card-heading">
+                    <h2 class="title">Check Your SMS</h2>
+                </div>
+                <div class="card-body">
+                    <form method="POST" name="getmgs" action="/result">
+                        <div class="form-row">
+                            <div class="name">Message</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <textarea class="textarea--style-6" name="message" placeholder="Enter a SMS to check spam or not." required="black"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                    <center><button class="btn btn-dark btn-outline-secondary" type="submit">Check Out</button>      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    <a href="/"><button type="button" class="btn btn-success">Clear</button></a></center>
+                	</div>
+                    </form>
+                    <div class="card-body">
+                    	<center><p>{{ message }}</p></center>
+                    	<br>
+                    {% if result == 0 %}
+                        <div class="alert alert-danger" role="alert">
+                                <center><b>Wait a minute! Don't trust on there is a SPAM! <img src="https://img.icons8.com/officel/32/000000/surprised.png"/></b></center>
+                        </div>
+                    
+                    {% elif result == 1 %}
+                        <div class="alert alert-success" role="alert">
+                                <center><b>Thank God!, this is a normal message.<img src="https://img.icons8.com/emoji/48/000000/grinning-face-emoji.png"/></b></center>
+                        </div>
+                    {% endif %}</div>
+                </div>
+            </div>
+       
+    <footer class="text-gray-700 body-font">
+  <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+    
+    <p class="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">Made with ❤️ by
+     <a href="https://twitter.com/rohitpthak" class="text-gray-600 ml-1" rel="noopener noreferrer" target="_blank">@Rohit_Pathak</a>
+    </p>
+    <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+      
+      <a class="ml-3 text-gray-500" href="https://bit.ly/3aWT16g">
+        <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+          <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+        </svg>
+      </a>
+      <a class="ml-3 text-gray-500" href="https://bit.ly/3eTGyRT">
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+          <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+          <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+        </svg>
+      </a>
+      <a class="ml-3 text-gray-500" href="https://bit.ly/3xNkOzO">
+        <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+          <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+          <circle cx="4" cy="4" r="2" stroke="none"></circle>
+        </svg>
+      </a>
+    </span>
+  </div>
+</footer>
+
+ </div>
+    </div>
+<!--===============================================================================================-->
+    <!-- Jquery JS-->
+    <script src="{{ url_for('static', filename='vendor/jquery/jquery.min.js') }}"></script>
+<!--===============================================================================================-->
+    <!-- Main JS-->
+    <script src="{{ url_for('static', filename='js/global.js') }}"></script>
+    <!--===============================================================================================-->
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>
+<!-- end document-->

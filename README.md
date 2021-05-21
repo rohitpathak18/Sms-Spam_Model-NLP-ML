@@ -10,11 +10,11 @@ In this repositary i have created a SMS Spam Prediction project modelin machine 
 
 # How to run the project? :thinking:
 **1).** Run all command manually
-  - Clone github repository in your local system  `git clone https://github.com/yogeshnile/spam-sms-detector.git`
+  - Clone github repository in your local system  `git clone https://github.com/rohitpathaj18/spam-sms_model-NLP-ML.git`
   - Move in spam-sms-detector repository  `cd spam-sms-detector`
   - Create new virtual python environment  `python3 -m venv venv`
   - Activate virtual python environment  `source venv/bin/activate`
-  - Install all the libraries mentioned in [requirements.txt](https://github.com/yogeshnile/spam-sms-detector/blob/master/requirements.txt)  using  `pip install -r requirements.txt`
+  - Install all the libraries mentioned in [requirements.txt](https://github.com/rohitpathak18/spam-sms_model-NLP-ML/blob/master/requirements.txt)  using  `pip install -r requirements.txt`
   - Run FlaskApp file  `python app.py`
   - Go to your browser and type http://127.0.0.1:5000/ in the address bar.
   - Hurray! That's it. <br>
